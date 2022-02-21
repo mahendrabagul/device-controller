@@ -1,0 +1,19 @@
+domain: mahendrabagul.github.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: device-controller
+repo: github.com/mahendrabagul/device-controller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: mahendrabagul.github.com
+  group: household
+  kind: Device
+  path: github.com/mahendrabagul/device-controller/api/v1alpha1
+  version: v1alpha1
+version: "3"

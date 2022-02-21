@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - household.mahendrabagul.github.com
+  resources:
+  - devices
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - household.mahendrabagul.github.com
+  resources:
+  - devices/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - household.mahendrabagul.github.com
+  resources:
+  - devices/status
+  verbs:
+  - get
+  - patch
+  - update
